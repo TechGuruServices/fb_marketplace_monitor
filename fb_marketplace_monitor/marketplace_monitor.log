@@ -1,0 +1,1086 @@
+2026-02-07 06:33:26,804 - storage - INFO - No existing storage file, starting fresh
+2026-02-07 06:33:26,805 - notifications - INFO - Telegram notifications enabled
+2026-02-07 06:33:26,805 - notifications - INFO - WhatsApp notifications enabled
+2026-02-07 06:33:26,807 - __main__ - INFO - Starting Facebook Marketplace Monitor...
+2026-02-07 06:33:26,810 - __main__ - INFO - === Facebook Marketplace Monitor Configuration ===
+
+📱 Notifications:
+   Telegram: ✅ Enabled
+   WhatsApp:  ✅ Enabled
+
+🔍 Search:
+   Keywords: AUTOMOTIVE / VEHICLES, ELECTRONICS, TOOLS / POWER TOOLS, TOOL SETS, CAR PARTS, INDUSTRIAL EQUIPMENT, WANTED TO BUY, FAST SALE, BRAND NEW / LIKE NEW, BUILDING MATERIALS
+   Location: MONTANA, USA / MISSOULA, MONTANA, USA / KALISPELL, MONTANA, USA / BILLINGS, MONTANA, USA /
+   Radius: 301 miles
+   Price: $0 - $500
+   Category: AUTOMOTIVE / VEHICLES, ELECTRONICS, FURNITURE, CLOTHING, TOOLS / POWER TOOLS/SETS, CAR PARTS, INDUSTRIAL EQUIPMENT / FARM EQUIPMENT
+
+⚙️ Monitor:
+   Check Interval: 120s
+   Headless Browser: True
+   Log Level: INFO
+2026-02-07 06:33:29,113 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8302493445:AAGA4VZfgq9WvSAEiyyJ_jzHkZ10uSmtmIk/sendMessage "HTTP/1.1 200 OK"
+2026-02-07 06:33:29,566 - twilio.http_client - INFO - -- BEGIN Twilio API Request --
+2026-02-07 06:33:29,567 - twilio.http_client - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/your_twilio_account_sid/Messages.json
+2026-02-07 06:33:29,567 - twilio.http_client - INFO - Headers:
+2026-02-07 06:33:29,567 - twilio.http_client - INFO - Content-Type : application/x-www-form-urlencoded
+2026-02-07 06:33:29,567 - twilio.http_client - INFO - Accept : application/json
+2026-02-07 06:33:29,567 - twilio.http_client - INFO - User-Agent : twilio-python/9.10.1 (Windows ARM64) Python/3.14.2
+2026-02-07 06:33:29,568 - twilio.http_client - INFO - X-Twilio-Client : python-9.10.1
+2026-02-07 06:33:29,568 - twilio.http_client - INFO - Accept-Charset : utf-8
+2026-02-07 06:33:29,568 - twilio.http_client - INFO - -- END Twilio API Request --
+2026-02-07 06:33:30,425 - twilio.http_client - INFO - Response Status Code: 401
+2026-02-07 06:33:30,427 - twilio.http_client - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Sat, 07 Feb 2026 13:33:32 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQb087943a5e96fd4fb2fc7a084e068cbd', 'Twilio-Request-Duration': '0.007', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 001e7070d795018d01b93988b9723742.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'SEA73-P1', 'X-Amz-Cf-Id': 'WvFzTFe9qi6aL1Et0HyUOPFlHMotSe_4fzcEHz1BSSG0xrNuFv-tJQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-02-07 06:33:30,427 - notifications - ERROR - Failed to send WhatsApp message: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/your_twilio_account_sid/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+2026-02-07 06:33:30,428 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:33:30,756 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,756 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:33:30,758 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,758 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:33:30,760 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,760 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:33:30,762 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,762 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:33:30,765 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,766 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:33:30,768 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,768 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:33:30,770 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,771 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:33:30,772 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,772 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:33:30,776 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,776 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:33:30,778 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,779 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:33:30,780 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,780 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:33:30,781 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:33:30,782 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:33:30,782 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:33:30,783 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:34:20,250 - storage - INFO - No existing storage file, starting fresh
+2026-02-07 06:34:20,250 - notifications - INFO - Telegram notifications enabled
+2026-02-07 06:34:20,251 - notifications - INFO - WhatsApp notifications enabled
+2026-02-07 06:34:20,252 - __main__ - INFO - Starting Facebook Marketplace Monitor...
+2026-02-07 06:34:20,252 - __main__ - INFO - === Facebook Marketplace Monitor Configuration ===
+
+📱 Notifications:
+   Telegram: ✅ Enabled
+   WhatsApp:  ✅ Enabled
+
+🔍 Search:
+   Keywords: AUTOMOTIVE / VEHICLES, ELECTRONICS, FURNITURE, CLOTHING, TOOLS / POWER TOOLS, TOOL SETS, CAR PARTS, INDUSTRIAL EQUIPMENT, WANTED TO BUY, FAST SALE, BRAND NEW / LIKE NEW, BUILDING MATERIALS
+   Location: MONTANA, USA / MISSOULA, MONTANA, USA / KALISPELL, MONTANA, USA / BILLINGS, MONTANA, USA /
+   Radius: 301 miles
+   Price: $0 - $500
+   Category: AUTOMOTIVE / VEHICLES, ELECTRONICS, FURNITURE, CLOTHING, TOOLS / POWER TOOLS/SETS, CAR PARTS, INDUSTRIAL EQUIPMENT / FARM EQUIPMENT
+
+⚙️ Monitor:
+   Check Interval: 120s
+   Headless Browser: True
+   Log Level: INFO
+2026-02-07 06:34:22,188 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8302493445:AAGA4VZfgq9WvSAEiyyJ_jzHkZ10uSmtmIk/sendMessage "HTTP/1.1 200 OK"
+2026-02-07 06:34:22,402 - twilio.http_client - INFO - -- BEGIN Twilio API Request --
+2026-02-07 06:34:22,402 - twilio.http_client - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/your_twilio_account_sid/Messages.json
+2026-02-07 06:34:22,402 - twilio.http_client - INFO - Headers:
+2026-02-07 06:34:22,403 - twilio.http_client - INFO - Content-Type : application/x-www-form-urlencoded
+2026-02-07 06:34:22,403 - twilio.http_client - INFO - Accept : application/json
+2026-02-07 06:34:22,403 - twilio.http_client - INFO - User-Agent : twilio-python/9.10.1 (Windows ARM64) Python/3.14.2
+2026-02-07 06:34:22,403 - twilio.http_client - INFO - X-Twilio-Client : python-9.10.1
+2026-02-07 06:34:22,403 - twilio.http_client - INFO - Accept-Charset : utf-8
+2026-02-07 06:34:22,403 - twilio.http_client - INFO - -- END Twilio API Request --
+2026-02-07 06:34:23,024 - twilio.http_client - INFO - Response Status Code: 401
+2026-02-07 06:34:23,025 - twilio.http_client - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Sat, 07 Feb 2026 13:34:24 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQbf2055c644da00e65386aeb208e3b055', 'Twilio-Request-Duration': '0.008', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 1508efc4152aa1778ed4adecb328b374.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'SEA73-P1', 'X-Amz-Cf-Id': 'w9lTcg4bMUmp1ktWOLop4PDrREXVDpawKA1NymrC7azgGaCaDlebgA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-02-07 06:34:23,026 - notifications - ERROR - Failed to send WhatsApp message: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/your_twilio_account_sid/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+2026-02-07 06:34:23,026 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:34:23,121 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,121 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:34:23,122 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,123 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:34:23,124 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,124 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:34:23,126 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,126 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:34:23,130 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,131 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:34:23,133 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,133 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:34:23,134 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,135 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:34:23,136 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,136 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:34:23,138 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,138 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:34:23,142 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,142 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:34:23,144 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,144 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:34:23,146 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:34:23,146 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:34:23,146 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:34:23,146 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:35:30,794 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:35:30,799 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,799 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:35:30,801 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,801 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:35:30,803 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,804 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:35:30,808 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,809 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:35:30,812 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,812 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:35:30,814 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,815 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:35:30,820 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,820 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:35:30,822 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,822 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:35:30,824 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,824 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:35:30,825 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,825 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:35:30,828 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,828 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:35:30,829 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:35:30,830 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:35:30,830 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:35:30,830 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:36:23,154 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:36:23,160 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,161 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:36:23,164 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,164 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:36:23,166 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,166 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:36:23,170 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,172 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:36:23,175 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,175 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:36:23,177 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,177 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:36:23,180 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,181 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:36:23,183 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,183 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:36:23,185 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,185 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:36:23,187 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,187 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:36:23,188 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,188 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:36:23,190 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:36:23,192 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:36:23,192 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:36:23,192 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:37:30,832 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:37:30,843 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,847 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:37:30,854 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,855 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:37:30,859 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,860 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:37:30,864 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,864 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:37:30,868 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,868 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:37:30,872 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,873 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:37:30,876 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,876 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:37:30,881 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,882 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:37:30,885 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,907 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:37:30,988 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,990 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:37:30,994 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,995 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:37:30,998 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:37:30,998 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:37:30,999 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:37:31,000 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:38:23,200 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:38:23,205 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,205 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:38:23,208 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,208 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:38:23,214 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,214 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:38:23,217 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,217 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:38:23,219 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,220 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:38:23,224 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,225 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:38:23,227 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,227 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:38:23,229 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,230 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:38:23,231 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,232 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:38:23,249 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,249 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:38:23,255 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,255 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:38:23,258 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:38:23,258 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:38:23,258 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:38:23,259 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:39:31,004 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:39:31,016 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,016 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:39:31,022 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,022 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:39:31,025 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,025 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:39:31,027 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,027 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:39:31,030 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,030 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:39:31,033 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,033 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:39:31,036 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,036 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:39:31,039 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,039 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:39:31,041 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,041 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:39:31,044 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,044 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:39:31,045 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,046 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:39:31,047 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:39:31,048 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:39:31,048 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:39:31,048 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:40:23,268 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:40:23,275 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,277 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:40:23,280 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,280 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:40:23,282 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,285 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:40:23,287 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,287 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:40:23,289 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,289 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:40:23,291 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,291 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:40:23,293 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,293 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:40:23,295 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,295 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:40:23,297 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,297 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:40:23,318 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,321 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:40:23,336 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,339 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:40:23,342 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:40:23,354 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:40:23,356 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:40:23,356 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:42:23,358 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:42:23,362 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,362 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:42:23,364 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,364 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:42:23,366 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,366 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:42:23,368 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,368 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:42:23,371 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,371 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:42:23,374 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,374 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:42:23,376 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,376 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:42:23,378 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,378 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:42:23,379 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,380 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:42:23,383 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,383 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:42:23,385 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,385 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:42:23,387 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:42:23,387 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:42:23,387 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:42:23,388 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:44:23,400 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:44:23,406 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,408 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:44:23,415 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,416 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:44:23,419 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,419 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:44:23,424 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,425 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:44:23,428 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,429 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:44:23,433 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,433 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:44:23,435 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,435 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:44:23,438 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,438 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:44:23,441 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,441 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:44:23,444 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,445 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:44:23,447 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,447 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:44:23,450 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:44:23,450 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:44:23,450 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:44:23,451 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:46:26,726 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:46:26,736 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,738 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:46:26,743 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,743 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:46:26,747 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,748 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:46:26,751 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,751 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:46:26,758 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,759 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:46:26,762 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,762 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:46:26,765 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,765 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:46:26,768 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,768 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:46:26,770 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,770 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:46:26,773 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,773 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:46:26,775 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,775 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:46:26,777 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:46:26,777 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:46:26,777 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:46:26,777 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 06:52:48,087 - __main__ - INFO - Starting marketplace check...
+2026-02-07 06:52:48,173 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:48,195 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 06:52:48,281 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:48,300 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 06:52:48,359 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:48,379 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 06:52:48,454 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:48,473 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 06:52:48,530 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:48,551 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 06:52:48,685 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:48,705 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 06:52:48,777 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:48,786 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 06:52:48,859 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:48,888 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 06:52:48,960 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:48,975 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 06:52:49,038 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:49,051 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 06:52:49,096 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:49,103 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 06:52:49,136 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 06:52:49,143 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 06:52:49,149 - __main__ - INFO - Found 0 total listings
+2026-02-07 06:52:49,155 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 08:02:58,982 - __main__ - INFO - Starting marketplace check...
+2026-02-07 08:02:58,991 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:58,991 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 08:02:58,995 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:58,995 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 08:02:58,997 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:58,998 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 08:02:59,001 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:59,001 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 08:02:59,003 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:59,003 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 08:02:59,007 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:59,007 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 08:02:59,009 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:59,009 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 08:02:59,011 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:59,011 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 08:02:59,014 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:59,014 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 08:02:59,017 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:59,017 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 08:02:59,019 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:59,019 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 08:02:59,021 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:02:59,021 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 08:02:59,022 - __main__ - INFO - Found 0 total listings
+2026-02-07 08:02:59,022 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 08:04:59,031 - __main__ - INFO - Starting marketplace check...
+2026-02-07 08:04:59,043 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,044 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 08:04:59,048 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,049 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 08:04:59,052 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,053 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 08:04:59,056 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,057 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 08:04:59,060 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,061 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 08:04:59,064 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,064 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 08:04:59,067 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,067 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 08:04:59,070 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,070 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 08:04:59,073 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,074 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 08:04:59,076 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,077 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 08:04:59,083 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,084 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 08:04:59,087 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:04:59,087 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 08:04:59,088 - __main__ - INFO - Found 0 total listings
+2026-02-07 08:04:59,088 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 08:06:59,104 - __main__ - INFO - Starting marketplace check...
+2026-02-07 08:06:59,115 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,117 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 08:06:59,126 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,127 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 08:06:59,130 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,131 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 08:06:59,134 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,136 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 08:06:59,145 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,146 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 08:06:59,151 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,151 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 08:06:59,154 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,154 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 08:06:59,158 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,158 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 08:06:59,161 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,161 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 08:06:59,164 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,165 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 08:06:59,168 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,168 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 08:06:59,171 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:06:59,171 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 08:06:59,172 - __main__ - INFO - Found 0 total listings
+2026-02-07 08:06:59,172 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 08:08:59,175 - __main__ - INFO - Starting marketplace check...
+2026-02-07 08:08:59,182 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,183 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 08:08:59,187 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,187 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 08:08:59,191 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,191 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 08:08:59,194 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,195 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 08:08:59,197 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,198 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 08:08:59,201 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,201 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 08:08:59,204 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,204 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 08:08:59,207 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,207 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 08:08:59,209 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,210 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 08:08:59,212 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,213 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 08:08:59,215 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,216 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 08:08:59,218 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:08:59,218 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 08:08:59,219 - __main__ - INFO - Found 0 total listings
+2026-02-07 08:08:59,219 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 08:10:59,233 - __main__ - INFO - Starting marketplace check...
+2026-02-07 08:10:59,244 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,248 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 08:10:59,254 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,255 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 08:10:59,260 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,260 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 08:10:59,264 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,265 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 08:10:59,269 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,269 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 08:10:59,273 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,273 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 08:10:59,275 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,276 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 08:10:59,279 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,280 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 08:10:59,282 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,282 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 08:10:59,284 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,284 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 08:10:59,286 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,287 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 08:10:59,289 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:10:59,289 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 08:10:59,289 - __main__ - INFO - Found 0 total listings
+2026-02-07 08:10:59,291 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 08:13:21,729 - __main__ - INFO - Starting marketplace check...
+2026-02-07 08:13:21,734 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,735 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 08:13:21,739 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,739 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 08:13:21,742 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,742 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 08:13:21,744 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,744 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 08:13:21,747 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,747 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 08:13:21,750 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,751 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 08:13:21,753 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,753 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 08:13:21,756 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,756 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 08:13:21,760 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,760 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 08:13:21,762 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,762 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 08:13:21,764 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,764 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 08:13:21,767 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:13:21,767 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 08:13:21,768 - __main__ - INFO - Found 0 total listings
+2026-02-07 08:13:21,768 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 08:15:21,775 - __main__ - INFO - Starting marketplace check...
+2026-02-07 08:15:21,780 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,781 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 08:15:21,784 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,785 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 08:15:21,788 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,788 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 08:15:21,791 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,792 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 08:15:21,794 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,794 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 08:15:21,797 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,797 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 08:15:21,800 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,800 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 08:15:21,804 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,804 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 08:15:21,806 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,807 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 08:15:21,809 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,809 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 08:15:21,811 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,812 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 08:15:21,816 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:15:21,816 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 08:15:21,816 - __main__ - INFO - Found 0 total listings
+2026-02-07 08:15:21,817 - __main__ - INFO - Next check in 120 seconds...
+2026-02-07 08:17:21,829 - __main__ - INFO - Starting marketplace check...
+2026-02-07 08:17:21,839 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,840 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-07 08:17:21,851 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,851 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-07 08:17:21,859 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,860 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-07 08:17:21,863 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,864 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-07 08:17:21,870 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,871 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-07 08:17:21,874 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,875 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-07 08:17:21,881 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,882 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-07 08:17:21,885 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,885 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-07 08:17:21,890 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,891 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-07 08:17:21,894 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,894 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-07 08:17:21,897 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,897 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-07 08:17:21,903 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-07 08:17:21,903 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-07 08:17:21,903 - __main__ - INFO - Found 0 total listings
+2026-02-07 08:17:21,904 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:13:27,283 - storage - INFO - No existing storage file, starting fresh
+2026-02-08 06:13:27,285 - notifications - INFO - Telegram notifications enabled
+2026-02-08 06:13:27,285 - notifications - INFO - WhatsApp notifications enabled
+2026-02-08 06:13:27,288 - __main__ - INFO - Starting Facebook Marketplace Monitor...
+2026-02-08 06:13:27,289 - __main__ - INFO - === Facebook Marketplace Monitor Configuration ===
+
+📱 Notifications:
+   Telegram: ✅ Enabled
+   WhatsApp:  ✅ Enabled
+
+🔍 Search:
+   Keywords: AUTOMOTIVE / VEHICLES, ELECTRONICS, FURNITURE, CLOTHING, TOOLS / POWER TOOLS, TOOL SETS, CAR PARTS, INDUSTRIAL EQUIPMENT, WANTED TO BUY, FAST SALE, BRAND NEW / LIKE NEW, BUILDING MATERIALS
+   Location: MONTANA, USA / MISSOULA, MONTANA, USA / KALISPELL, MONTANA, USA / BILLINGS, MONTANA, USA /
+   Radius: 301 miles
+   Price: $0 - $500
+   Category: AUTOMOTIVE / VEHICLES, ELECTRONICS, FURNITURE, CLOTHING, TOOLS / POWER TOOLS/SETS, CAR PARTS, INDUSTRIAL EQUIPMENT / FARM EQUIPMENT
+
+⚙️ Monitor:
+   Check Interval: 120s
+   Headless Browser: True
+   Log Level: INFO
+2026-02-08 06:13:29,984 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8302493445:AAGA4VZfgq9WvSAEiyyJ_jzHkZ10uSmtmIk/sendMessage "HTTP/1.1 200 OK"
+2026-02-08 06:13:30,571 - twilio.http_client - INFO - -- BEGIN Twilio API Request --
+2026-02-08 06:13:30,572 - twilio.http_client - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/your_twilio_account_sid/Messages.json
+2026-02-08 06:13:30,573 - twilio.http_client - INFO - Headers:
+2026-02-08 06:13:30,575 - twilio.http_client - INFO - Content-Type : application/x-www-form-urlencoded
+2026-02-08 06:13:30,575 - twilio.http_client - INFO - Accept : application/json
+2026-02-08 06:13:30,575 - twilio.http_client - INFO - User-Agent : twilio-python/9.10.1 (Windows ARM64) Python/3.14.2
+2026-02-08 06:13:30,575 - twilio.http_client - INFO - X-Twilio-Client : python-9.10.1
+2026-02-08 06:13:30,580 - twilio.http_client - INFO - Accept-Charset : utf-8
+2026-02-08 06:13:30,583 - twilio.http_client - INFO - -- END Twilio API Request --
+2026-02-08 06:13:31,602 - twilio.http_client - INFO - Response Status Code: 401
+2026-02-08 06:13:31,607 - twilio.http_client - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '134', 'Connection': 'keep-alive', 'Date': 'Sun, 08 Feb 2026 13:13:52 GMT', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ699fe0de194d3d5cb6ffe39e2521dd1a', 'Twilio-Request-Duration': '0.004', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'WWW-Authenticate': 'Basic realm="Twilio API"', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 8d5c7ec67eeb7d885e29a730833e350a.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'YYC51-P1', 'X-Amz-Cf-Id': 'DDXnr2uxP2xZ_XjLGceBcqhiQvuvuAsrePXOu3sL4NFy_jwxnf6hfQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-02-08 06:13:31,609 - notifications - ERROR - Failed to send WhatsApp message: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/your_twilio_account_sid/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+2026-02-08 06:13:31,610 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:13:31,842 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,843 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:13:31,845 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,846 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:13:31,850 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,861 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:13:31,864 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,864 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:13:31,867 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,867 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:13:31,873 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,873 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:13:31,875 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,875 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:13:31,877 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,877 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:13:31,879 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,880 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:13:31,883 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,883 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:13:31,885 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,885 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:13:31,887 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:13:31,887 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:13:31,887 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:13:31,888 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:15:31,892 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:15:31,927 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:31,928 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:15:31,936 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:31,936 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:15:31,942 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:31,944 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:15:31,952 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:31,953 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:15:31,962 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:31,962 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:15:31,972 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:31,972 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:15:31,982 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:31,982 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:15:31,990 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:31,991 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:15:31,996 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:31,996 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:15:32,005 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:32,006 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:15:32,014 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:32,015 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:15:32,019 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:15:32,019 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:15:32,022 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:15:32,025 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:17:32,031 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:17:32,047 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,049 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:17:32,054 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,054 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:17:32,103 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,104 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:17:32,110 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,110 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:17:32,114 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,115 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:17:32,123 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,124 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:17:32,132 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,133 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:17:32,140 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,143 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:17:32,148 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,148 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:17:32,157 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,158 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:17:32,166 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,167 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:17:32,170 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:17:32,171 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:17:32,171 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:17:32,171 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:19:32,182 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:19:32,197 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,198 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:19:32,207 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,207 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:19:32,213 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,214 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:19:32,217 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,218 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:19:32,220 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,220 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:19:32,223 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,224 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:19:32,227 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,227 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:19:32,230 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,230 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:19:32,234 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,234 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:19:32,239 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,239 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:19:32,242 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,243 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:19:32,245 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:19:32,245 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:19:32,246 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:19:32,247 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:21:32,257 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:21:32,264 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,265 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:21:32,271 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,272 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:21:32,278 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,279 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:21:32,285 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,286 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:21:32,295 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,296 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:21:32,302 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,302 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:21:32,308 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,308 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:21:32,313 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,313 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:21:32,317 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,317 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:21:32,320 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,321 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:21:32,328 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,328 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:21:32,333 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:21:32,334 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:21:32,334 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:21:32,335 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:23:32,350 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:23:32,363 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,363 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:23:32,376 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,377 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:23:32,381 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,382 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:23:32,388 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,388 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:23:32,392 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,393 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:23:32,396 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,397 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:23:32,400 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,400 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:23:32,403 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,404 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:23:32,408 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,409 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:23:32,414 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,414 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:23:32,418 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,418 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:23:32,421 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:23:32,422 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:23:32,422 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:23:32,422 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:25:32,432 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:25:32,455 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,456 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:25:32,464 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,465 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:25:32,471 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,472 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:25:32,476 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,476 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:25:32,479 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,481 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:25:32,485 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,485 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:25:32,488 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,488 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:25:32,492 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,492 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:25:32,495 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,496 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:25:32,499 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,499 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:25:32,503 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,505 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:25:32,509 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:25:32,509 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:25:32,511 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:25:32,513 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:27:32,517 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:27:32,528 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,529 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:27:32,537 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,539 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:27:32,544 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,545 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:27:32,551 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,552 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:27:32,556 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,557 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:27:32,562 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,562 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:27:32,566 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,566 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:27:32,570 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,570 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:27:32,576 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,576 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:27:32,580 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,581 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:27:32,585 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,585 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:27:32,589 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:27:32,589 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:27:32,590 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:27:32,590 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:29:32,593 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:29:32,606 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,607 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:29:32,616 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,617 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:29:32,623 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,624 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:29:32,631 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,632 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:29:32,638 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,638 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:29:32,644 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,646 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:29:32,652 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,653 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:29:32,659 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,660 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:29:32,666 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,668 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:29:32,674 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,675 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:29:32,681 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,682 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:29:32,687 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:29:32,688 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:29:32,689 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:29:32,690 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:31:32,702 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:31:32,715 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,716 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:31:32,728 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,729 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:31:32,739 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,740 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:31:32,751 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,751 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:31:32,761 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,761 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:31:32,770 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,770 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:31:32,781 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,781 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:31:32,791 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,792 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:31:32,800 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,801 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:31:32,807 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,812 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:31:32,818 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,818 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:31:32,828 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:31:32,828 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:31:32,829 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:31:32,829 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:33:32,839 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:33:32,846 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,846 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:33:32,856 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,859 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:33:32,868 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,868 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:33:32,874 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,874 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:33:32,878 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,878 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:33:32,881 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,883 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:33:32,887 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,888 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:33:32,896 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,897 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:33:32,900 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,901 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:33:32,906 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,906 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:33:32,910 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,910 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:33:32,912 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:33:32,913 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:33:32,913 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:33:32,914 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:35:32,921 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:35:32,943 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,943 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:35:32,951 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,952 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:35:32,954 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,954 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:35:32,962 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,962 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:35:32,965 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,965 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:35:32,966 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,971 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:35:32,973 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,973 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:35:32,975 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,975 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:35:32,977 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,977 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:35:32,981 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,982 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:35:32,986 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,986 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:35:32,990 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:35:32,990 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:35:32,990 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:35:32,990 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:37:32,998 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:37:33,034 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,039 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:37:33,046 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,046 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:37:33,052 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,052 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:37:33,056 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,056 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:37:33,061 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,062 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:37:33,065 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,065 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:37:33,068 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,068 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:37:33,070 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,070 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:37:33,072 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,073 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:37:33,074 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,075 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:37:33,078 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,078 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:37:33,082 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:37:33,083 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:37:33,083 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:37:33,083 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:39:33,096 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:39:33,111 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,112 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:39:33,122 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,123 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:39:33,135 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,136 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:39:33,143 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,143 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:39:33,147 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,150 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:39:33,154 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,155 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:39:33,164 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,165 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:39:33,172 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,173 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:39:33,176 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,176 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:39:33,179 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,179 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:39:33,183 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,183 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:39:33,186 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:39:33,186 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:39:33,187 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:39:33,187 - __main__ - INFO - Next check in 120 seconds...
+2026-02-08 06:41:33,191 - __main__ - INFO - Starting marketplace check...
+2026-02-08 06:41:33,207 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,207 - __main__ - ERROR - Error searching for 'AUTOMOTIVE / VEHICLES': No module named 'distutils'
+2026-02-08 06:41:33,211 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,211 - __main__ - ERROR - Error searching for 'ELECTRONICS': No module named 'distutils'
+2026-02-08 06:41:33,214 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,215 - __main__ - ERROR - Error searching for 'FURNITURE': No module named 'distutils'
+2026-02-08 06:41:33,217 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,218 - __main__ - ERROR - Error searching for 'CLOTHING': No module named 'distutils'
+2026-02-08 06:41:33,220 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,220 - __main__ - ERROR - Error searching for 'TOOLS / POWER TOOLS': No module named 'distutils'
+2026-02-08 06:41:33,222 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,222 - __main__ - ERROR - Error searching for 'TOOL SETS': No module named 'distutils'
+2026-02-08 06:41:33,225 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,225 - __main__ - ERROR - Error searching for 'CAR PARTS': No module named 'distutils'
+2026-02-08 06:41:33,228 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,228 - __main__ - ERROR - Error searching for 'INDUSTRIAL EQUIPMENT': No module named 'distutils'
+2026-02-08 06:41:33,231 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,231 - __main__ - ERROR - Error searching for 'WANTED TO BUY': No module named 'distutils'
+2026-02-08 06:41:33,236 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,236 - __main__ - ERROR - Error searching for 'FAST SALE': No module named 'distutils'
+2026-02-08 06:41:33,238 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,239 - __main__ - ERROR - Error searching for 'BRAND NEW / LIKE NEW': No module named 'distutils'
+2026-02-08 06:41:33,241 - scraper - ERROR - undetected-chromedriver not installed. Run: pip install undetected-chromedriver
+2026-02-08 06:41:33,242 - __main__ - ERROR - Error searching for 'BUILDING MATERIALS': No module named 'distutils'
+2026-02-08 06:41:33,242 - __main__ - INFO - Found 0 total listings
+2026-02-08 06:41:33,242 - __main__ - INFO - Next check in 120 seconds...

@@ -1,0 +1,21 @@
+# Facebook Marketplace Monitor Dependencies
+
+# Web scraping
+selenium>=4.15.0
+undetected-chromedriver>=3.5.4
+
+# Telegram notifications
+python-telegram-bot>=20.7
+
+# WhatsApp notifications via Twilio
+twilio>=8.10.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# HTTP requests
+requests>=2.31.0
+
+# REST API
+flask>=3.0.0
+flask-cors>=4.0.0

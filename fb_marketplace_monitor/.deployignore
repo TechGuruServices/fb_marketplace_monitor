@@ -1,0 +1,9 @@
+# Files to exclude from deployment
+*.pyc
+__pycache__/
+*.log
+.env
+seen_listings.json
+test_telegram.py
+verify_chat.py
+setup.py
