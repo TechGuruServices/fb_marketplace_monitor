@@ -1,6 +1,6 @@
 """
 Notification Module for Facebook Marketplace Monitor
-Handles sending notifications via Telegram and WhatsApp.
+Handles sending notifications via Telegram.
 """
 
 import logging
@@ -43,7 +43,7 @@ class Listing:
         return "\n".join(lines)
     
     def format_plain_message(self) -> str:
-        """Format listing as plain text (for WhatsApp)."""
+        """Format listing as plain text."""
         lines = [
             "🆕 New Marketplace Listing!",
             "",
@@ -139,94 +139,28 @@ class TelegramNotifier:
         except Exception as e:
             logger.error(f"Failed to send Telegram message: {e}")
             return False
-    
-    def __init__(self, account_sid: str, auth_token: str, from_number: str, to_number: str):
-        self.account_sid = account_sid
-        self.auth_token = auth_token
-        self.from_number = from_number
-        self.to_number = to_number
-        self._client = None
-    
-    def _get_client(self):
-        """Lazy initialization of Twilio client."""
-        if self._client is None:
-            try:
-                from twilio.rest import Client
-                self._client = Client(self.account_sid, self.auth_token)
-            except ImportError:
-                logger.error("twilio not installed. Run: pip install twilio")
-                raise
-        return self._client
-    
-    def send_listing(self, listing: Listing) -> bool:
-        """Send a listing notification via WhatsApp."""
-        try:
-            client = self._get_client()
-            message = listing.format_plain_message()
-            
-            # Send message
-            response = client.messages.create(
-                body=message,
-                from_=self.from_number,
-                to=self.to_number
-            )
-            
-            logger.info(f"WhatsApp notification sent for listing: {listing.listing_id}, SID: {response.sid}")
-            return True
-            
-        except Exception as e:
-            logger.error(f"Failed to send WhatsApp notification: {e}")
-            return False
-    
-    def send_message(self, text: str) -> bool:
-        """Send a plain text message via WhatsApp."""
-        try:
-            client = self._get_client()
-            response = client.messages.create(
-                body=text,
-                from_=self.from_number,
-                to=self.to_number
-            )
-            logger.info(f"WhatsApp message sent, SID: {response.sid}")
-            return True
-        except Exception as e:
-            logger.error(f"Failed to send WhatsApp message: {e}")
-            return False
 
 
 class NotificationManager:
-    """Manages all notification channels."""
+    """Manages Telegram notifications."""
     
     def __init__(self, config):
         self.config = config
-        self._telegram: Optional[TelegramNotifier] = 
-    
+        self._telegram: Optional[TelegramNotifier] = None
         
-        # Initialize enabled notifiers
+        # Initialize Telegram notifier if enabled
         if config.telegram.enabled:
             self._telegram = TelegramNotifier(
                 config.telegram.bot_token,
                 config.telegram.chat_id
             )
             logger.info("Telegram notifications enabled")
-        
-        if config.whatsapp.enabled:
-            self._whatsapp = WhatsAppNotifier(
-                config.whatsapp.account_sid,
-                config.whatsapp.auth_token,
-                config.whatsapp.from_number,
-                config.whatsapp.to_number
-            )
-            logger.info("WhatsApp notifications enabled")
     
     async def notify_listing(self, listing: Listing) -> bool:
-        """Send listing notification to all enabled channels."""
-        success = True
-        
+        """Send listing notification via Telegram."""
         if self._telegram:
-            if await self._telegram.send_listing(listing):
-                success = True
-        return success
+            return await self._telegram.send_listing(listing)
+        return False
     
     async def notify_listings(self, listings: List[Listing]) -> int:
         """Send notifications for multiple listings. Returns count of successful notifications."""
@@ -239,18 +173,10 @@ class NotificationManager:
         return success_count
     
     async def send_status_message(self, message: str) -> bool:
-        """Send a status message to all enabled channels."""
-        success = False
-        
+        """Send a status message via Telegram."""
         if self._telegram:
-            if await self._telegram.send_message(message):
-                success = True
-        
-        if self._whatsapp:
-            if self._whatsapp.send_message(message):
-                success = True
-        
-        return success
+            return await self._telegram.send_message(message)
+        return False
 
 
 if __name__ == "__main__":
@@ -270,5 +196,5 @@ if __name__ == "__main__":
     print("=== Telegram Format (Markdown) ===")
     print(test_listing.format_message())
     print()
-    print("=== WhatsApp Format (Plain) ===")
+    print("=== Plain Text Format ===")
     print(test_listing.format_plain_message())
